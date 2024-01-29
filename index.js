@@ -12,7 +12,22 @@ app.get("/",async (req,res)=>{
 
 app.get("/about",async(req,res)=>{
     res.render("about.ejs");
-})
+});
+
+const cred = [];
+app.post('/submit', (req, res) => {
+    const {name,email,contact} = req.body;
+
+    let newUser = {
+        name,
+        email,
+        contact,
+      };
+
+     cred.push(newUser); 
+      console.log(cred);
+});
+
 app.listen(port,()=>{
     console.log(`app is live at http://localhost${port}`);
 })
