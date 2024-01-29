@@ -33,7 +33,7 @@ app.post('/submit', (req, res) => {
 app.get("/contact", async(req,res)=>{
     res.render("contact.ejs");
 })
-//lauda
+
 app.listen(port,()=>{
     console.log(`app is live at http://localhost${port}`);
 })
