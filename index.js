@@ -17,16 +17,23 @@ app.get("/about",async(req,res)=>{
 
 const cred = [];
 app.post('/submit', (req, res) => {
-    const {name,email,contact} = req.body;
+    const {name,email,contact,location,message} = req.body;
+    if(!name||!email||!contact){
+     return res.sendStatus(400);
+     // res.json("there is error at server side");
+    }
 
     let newUser = {
         name,
         email,
         contact,
+        location,
+        message,
       };
 
      cred.push(newUser); 
       console.log(cred);
+      res.redirect("/");
 });
 
 
