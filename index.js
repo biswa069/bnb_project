@@ -50,6 +50,6 @@ app.get("/contact", async(req,res)=>{
     });
 })
 
-app.listen(port,()=>{
-    console.log(`app is live at http://localhost${port}`);
+app.listen(port,"172.22.1.63",()=>{
+    console.log(`app is live at http://172.22.1.63:${port}`);
 })
