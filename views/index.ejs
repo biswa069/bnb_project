@@ -1,0 +1,92 @@
+<%- include("partials/header.ejs") %>
+  <style>
+    .card-section {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+    .sec1{
+      display: flex;
+      margin: 25px 25px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+   ;
+
+    
+    }
+
+    .card:hover{
+      background-image: url("/images/bg1.png");
+  background-position: center;
+  background-size: cover;
+    }
+    .card:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+
+    .button {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #cddce6;
+      color: #36434b;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  </style>
+  <link rel="stylesheet" href="styles/content.css">
+
+  <link rel="stylesheet" href="styles/layout.css">
+
+  <h1>NAAM NAHI PATA</h1>
+
+  <div class="home-page">
+    <div class="card-section">
+      <div class="sec1">
+        <div class="card">
+          <h2>Sport-Events:</h2>
+          <p> clicl here to get the list of all sports event that is going on in your city</p>
+          <button class="button">Click me</button>
+        </div>
+        <div class="card">
+          <h2>Sport-Events:</h2>
+          <p> clicl here to get the list of all sports event that is going on in your city</p>
+          <button class="button">Click me</button>
+        </div>
+      </div>
+      <div class="sec1">
+        <div class="card">
+          <h2>Sport-Events:</h2>
+          <p> clicl here to get the list of all sports event that is going on in your city</p>
+          <button class="button">Click me</button>
+        </div>
+        <div class="card">
+          <h2>Sport-Events:</h2>
+          <p> clicl here to get the list of all sports event that is going on in your city</p>
+          <button class="button">Click me</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%- include("partials/footer.ejs") %>
