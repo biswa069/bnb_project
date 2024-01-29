@@ -27,7 +27,7 @@ app.post('/submit', (req, res) => {
      cred.push(newUser); 
       console.log(cred);
 });
-
+//lauda
 app.listen(port,()=>{
     console.log(`app is live at http://localhost${port}`);
 })
