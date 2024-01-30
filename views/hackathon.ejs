@@ -1,0 +1,80 @@
+<%- include("partials/header.ejs") %>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <body class="bg-zinc-200">
+    <div class="container">
+      <!-- <h1>ON Going Hackathon</h1>
+      <a id="newPostBtn" href="/new">New Post</a>
+      <br> -->
+      <form action="/form" class="mb-12 max-w-4xl mx-auto flex border shadow-md">
+        <input class="px-3 flex-grow py-2" type="text" name="id" placeholder="Search By id ..">
+        <button class="px-3 py-1.5 w-fit text-white bg-gray-600 hover:bg-gray-500">submit</button>
+      </form>
+
+
+      <ul class="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
+        <%   if(  posts.length == 0 ) { %>
+        <p> id Not found</p>
+        <% }else{ %>
+        <%  posts.forEach(post => { %>
+        <li class="flex gap-2 max-w-4xl w-full border rounded-md shadow-md p-2 bg-white">
+          <img
+            src="<%=post.thumbnail_url %>"
+            alt="loading the image" class="aspect-square rounded h-48">
+
+          <div class="w-full text-left p-2 grid grid-cols-2">
+
+            <h3 class="uppercase px-2 py-1.5 col-span-2 text-xl font-bold">MLH's Month Long Hackathon</h3>
+
+            <span class="px-3 py-1.5 capitalize h-fit w-fit rounded-full bg-gray-600 text-white text-sm" >about one month left</span>
+            <span class="px-3 py-1.5 capitalize  h-fit w-fit rounded-full bg-blue-100 border border-blue-600 text-blue-600 font-sm" >Online</span>
+
+            <span class="px-2 py-1.5 capitalize" >$100,000 in prices</span>
+            <span class="px-2 py-1.5 capitalize" >1,000 Participants</span>
+            
+          </div>
+          
+
+          <!-- <small>By: post.author%> </small>
+          <a class="edit" href="/edit/ post.id %>">Edit</a>
+          <a class="delete" href="/api/posts/delete/post.id %>">Delete</a> -->
+        </li>
+        <% }); %>
+       <% } %>
+      </ul>
+    </div>
+
+  </body>
+
+  </html>
+  <%- include("partials/footer.ejs") %>
+      <!-- <h4>
+          MLH Long month Hackathon -->
+      <!--posts.title-->
+
+      <!-- <i style="font-size: 16px;font-weight: 600;"> 3 days left</i> -->
+      <!--posts.time_left_to_submission-->
+
+      <!-- </h4> -->
+
+      <!-- <div class="small-things">
+          <p style="display: flex; align-items: center;">  <i class="material-icons">&#xe55c;</i> online  </p> -->
+      <!--posts.displayed_location.location-->
+      <!-- <div class="space"></div>
+          <p>Open</p> -->
+      <!--posts.open_state-->
+      <!-- </div>
+
+        <div class="prize-pool">
+          <p> 20,000$</p> -->
+      <!--posts.prize_amount-->
+      <!-- <div class="space"></div>
+          <p> 582</p> -->
+      <!--posts.registrations_count-->
+
+
+      <!-- </div>
+
+       
+      </div> -->

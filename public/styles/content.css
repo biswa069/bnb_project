@@ -4,9 +4,9 @@ html,
 }
 body {
   height: 100%;
-  background-image: url("/images/1.jpg.jpg");
+  /* background-image: url("/images/1.jpg.jpg");
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 
 body {

@@ -1,11 +1,40 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
-const port = 80;
+import axios from "axios";
+const port = 3000;
 const app  = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+// const API_URL = "https://www.meetup.com/api/guide/#p03-publishing-section"
+// const graphQl = `mutation($input: CreateEventInput!) {
+//     createEvent(input: $input) {
+//       event {
+//         id
+//       }
+//       errors {
+//         message
+//         code
+//         field
+//       }
+//     }
+//   }`
 
+//   const variables = {
+//     input: {
+//       groupUrlname: "GROUP_URLNAME",
+//       title: "EVENT_TITLE",
+//       description: "EVENT_DESCRIPTION",
+//       startDateTime: "EVENT_STARTTIME",
+//       venueId: "EVENT_VENUE_ID",
+//       duration: "EVENT_DURATION",
+//       publishStatus: "DRAFT",
+//     },
+//   };
+
+let hackathons = [{
+   
+  }]
 
 app.get("/",async (req,res)=>{
    res.render("index.ejs");
@@ -50,6 +79,14 @@ app.get("/contact", async(req,res)=>{
     });
 })
 
-app.listen(port,"172.22.1.63",()=>{
-    console.log(`app is live at http://172.22.1.63:${port}`);
+app.get("/sports",(async (req,res)=>{
+    const result = await axios.get("https://devpost.com/api/hackathons?page=2");
+    hackathons = result.data.hackathons;
+    console.log(hackathons);
+    res.render("hackathon.ejs",{
+        posts: hackathons,
+    });
+}))
+app.listen(port,()=>{
+    console.log(`app is live at http://localhost${port}`);
 })
