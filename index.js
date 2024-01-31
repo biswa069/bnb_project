@@ -109,7 +109,7 @@ const headers = {
 };
 
 let params = {
-  category:"sports",
+  category:category,
   country: "IN",
 
   "location_around.origin": "20.267646,85.833995",
@@ -117,7 +117,7 @@ let params = {
 //    let params = {};
 
 try {
-  const response = await axios.get(url, { headers, params });
+  let response = await axios.get(url, { headers, params });
   res.json(response.data);
 } catch (error) {
   console.error(error);
