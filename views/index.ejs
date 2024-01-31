@@ -73,6 +73,22 @@
     color: white;
     }
 
+    .card-5 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+
     .card-1:hover{
       background-image: url("/images/new4.avif");
   background-position: center;
@@ -110,6 +126,17 @@
   background-size: cover;
     }
     .card-3:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+
+    .card-5:hover{
+      background-image: url("/images/art.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-5:hover .button {
       opacity: 1;
       transform: translateY(0);
   
@@ -183,17 +210,18 @@
             <button class="button">Click me</button>
           </form>
         </div>
-        <div class="card-4">
-          <h2>festivals:</h2>
+        <div class="card-5">
+          <h2>Art Festivals :</h2>
           <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/festivals" method="get">
+          <form action="/performing-arts" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
         <div class="card-4">
-          <h2>festivals:</h2>
-          <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/festivals" method="get">
+          <h2>Conferences:</h2>
+          <p> clicl here to get the list of all art event that is going on in your city</p>
+          
+          <form action="/conferences" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
