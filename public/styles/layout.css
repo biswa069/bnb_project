@@ -169,18 +169,15 @@ i {
 }
 
 footer {
-    position: relative;
-    width: 139%;
-    top: 93px;
-    right: 200px;
+    width: 100%;
     background: var(--main-color);
-    min-height: 100px;
     padding: 20px 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+    margin: 0;
 }
 
 footer .social_icon,
@@ -239,7 +236,7 @@ footer .social_icon li a:hover {
     height: 192px;
     width: 327px;
    position: relative;
-   border-radius: 20%;  
+   border-radius: 50%;  
      & img{
       height: 100%;
       width: 100%;
