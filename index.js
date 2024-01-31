@@ -79,7 +79,7 @@ app.get("/contact", async(req,res)=>{
     });
 })
 
-app.get("/sports",(async (req,res)=>{
+app.get("/hackathon",(async (req,res)=>{
     const result = await axios.get("https://devpost.com/api/hackathons?page=2");
     hackathons = result.data.hackathons;
     console.log(hackathons);
