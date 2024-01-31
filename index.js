@@ -2,7 +2,7 @@ import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
 import axios from "axios";
-const port = 3000;
+const port = 5000;
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -85,6 +85,19 @@ app.get("/hackathon", async (req, res) => {
   });
 });
 
+
+app.get("/hackathon",(async (req,res)=>{
+    const result = await axios.get("https://devpost.com/api/hackathons?page=2");
+    hackathons = result.data.hackathons;
+    console.log(hackathons);
+    res.render("hackathon.ejs",{
+        posts: hackathons,
+    });
+}))
+app.listen(port,()=>{
+    console.log(`app is live at http://localhost${port}`);
+})
+
 app.get("/:category", async (req, res) => {
   const category = req.params.category;
 
@@ -114,3 +127,4 @@ try {
 app.listen(port, () => {
   console.log(`app is live at http://localhost${port}`);
 });
+

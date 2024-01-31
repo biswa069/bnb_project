@@ -12,7 +12,7 @@
       align-items: center;
     }
 
-    .card {
+    .card-1 {
       position: relative;
     width: 338px;
     height: 197px;
@@ -23,17 +23,80 @@
     padding: auto;
     background-color: transparent;
     color: white;
-   ;
-
-    
+    }
+    .card-2 {
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+    .card-3 {
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+    .card-4 {
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
     }
 
-    .card:hover{
+    .card-1:hover{
+      background-image: url("/images/new4.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-1:hover .button {
+      opacity: 1;
+      transform: translatex(0);
+  
+    }
+    .card-4:hover{
       background-image: url("/images/bg1.png");
   background-position: center;
   background-size: cover;
     }
-    .card:hover .button {
+    .card-4:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+    .card-2:hover{
+      background-image: url("/images/concerts.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-2:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+    .card-3:hover{
+      background-image: url("/images/bg1.png");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-3:hover .button {
       opacity: 1;
       transform: translateY(0);
   
@@ -77,30 +140,30 @@
   <div class="home-page">
     <div class="card-section">
       <div class="sec1">
-        <div class="card">
-          <h2>Sport-Events:</h2>
-          <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/sports" method="get">
+        <div class="card-1">
+          <h2>tecH-Events:</h2>
+          <p> clicl here to get the list of all Hackathon that is going on in your city</p>
+          <form action="/hackathon" method="get">
           <button class="button">Click me</button>
         </form>
         </div>
-        <div class="card">
-          <h2>Sport-Events:</h2>
-          <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/sports" method="get">
+        <div class="card-2">
+          <h2>Concerts:</h2>
+          <p> clicl here to get the list of all Concerts that is going on in your city</p>
+          <form action="/concerts" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
       </div>
       <div class="sec1">
-        <div class="card">
+        <div class="card-3">
           <h2>Sport-Events:</h2>
           <p> clicl here to get the list of all sports event that is going on in your city</p>
           <form action="/sports" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
-        <div class="card">
+        <div class="card-4">
           <h2>Sport-Events:</h2>
           <p> clicl here to get the list of all sports event that is going on in your city</p>
           <form action="/festivals" method="get">

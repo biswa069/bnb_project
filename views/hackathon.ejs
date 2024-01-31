@@ -2,7 +2,21 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+  <style>
+    .new-bg{
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      object-fit: cover;
+      filter: brightness(0.4);
+      z-index: -2;
+    }
+  </style>
   <body class="bg-zinc-200">
+    <img src="images/new2.avif" class="new-bg" alt="">
     <div class="container">
       <!-- <h1>ON Going Hackathon</h1>
       <a id="newPostBtn" href="/new">New Post</a>
@@ -25,13 +39,13 @@
 
           <div class="w-full text-left p-2 grid grid-cols-2">
 
-            <h3 class="uppercase px-2 py-1.5 col-span-2 text-xl font-bold">MLH's Month Long Hackathon</h3>
+            <h3 class="uppercase px-2 py-1.5 col-span-2 text-xl font-bold"><%= post.title %></h3>
 
-            <span class="px-3 py-1.5 capitalize h-fit w-fit rounded-full bg-gray-600 text-white text-sm" >about one month left</span>
+            <span class="px-3 py-1.5 capitalize h-fit w-fit rounded-full bg-gray-600 text-white text-sm" ><%= post.time_left_to_submission %></span>
             <span class="px-3 py-1.5 capitalize  h-fit w-fit rounded-full bg-blue-100 border border-blue-600 text-blue-600 font-sm" >Online</span>
 
-            <span class="px-2 py-1.5 capitalize" >$100,000 in prices</span>
-            <span class="px-2 py-1.5 capitalize" >1,000 Participants</span>
+            <span class="px-2 py-1.5 capitalize" ><%= post.prize_amount %> in prices</span>
+            <span class="px-2 py-1.5 capitalize" ><%= post.registrations_count %> Participants</span>
             
           </div>
           
