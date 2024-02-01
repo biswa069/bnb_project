@@ -104,8 +104,7 @@ const headers = {
 };
 
 let params = {
-  category,
-   country: "IN",
+  
   category:category,
   country: "IN",
 
