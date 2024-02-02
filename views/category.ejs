@@ -14,6 +14,12 @@
       filter: brightness(0.4);
       z-index: -2;
     }
+.title{
+  display: flex;
+}
+    .space{
+      width: 100px;
+    }
   </style>
   <body class="bg-zinc-200">
     <img src="images/new2.avif" class="new-bg" alt="">
@@ -28,24 +34,46 @@
 
 
       <ul class="w-full max-w-4xl mx-auto flex flex-col items-center gap-4">
-        <%   if(  posts.length == 0 ) { %>
-        <p> id Not found</p>
-        <% }else{ %>
-        <%  posts.forEach(post => { %>
+   
+     <%    posts.forEach( post => { %>
+      <% if(post.state == 'active'){ %>
+        
+      <%  const today = new Date();%>
+
+        <!-- // Get the individual components of the date (day, month, year) -->
+       <%  const day = String(today.getDate()).padStart(2, '0');  %>
+       <%  const month = String(today.getMonth() + 1).padStart(2, '0'); %> 
+       <%     const year = today.getFullYear();%>
+        
+        
+        
+
         <li class="flex gap-2 max-w-4xl w-full border rounded-md shadow-md p-2 bg-white">
           <img
-            src="<%=post.thumbnail_url %>"
+            src="<%= Image %>"
             alt="loading the image" class="aspect-square rounded h-48">
 
           <div class="w-full text-left p-2 grid grid-cols-2">
+             <div class="title">
+            <h3 class="uppercase px-2 py-1.5 col-span-2 text-xl font-bold"><%= post.title %> 
+              
+              <% if(post.category == 'concerts'){ %>
+                <div class="space"></div>  On Going Concert in Your city</h3> <!-- title-->
+            <%  }else{ %>
+              </h3>
+             <% } %>
 
-            <h3 class="uppercase px-2 py-1.5 col-span-2 text-xl font-bold"><%= post.title %></h3>
-
-            <span class="px-3 py-1.5 capitalize h-fit w-fit rounded-full bg-gray-600 text-white text-sm" ><%= post.time_left_to_submission %></span>
+          </div>
+            <span class="px-3 py-1.5 capitalize h-fit w-fit rounded-full bg-gray-600 text-white text-sm" >Ends at : <%= post.end%></span> <!-- end-->
             <span class="px-3 py-1.5 capitalize  h-fit w-fit rounded-full bg-blue-100 border border-blue-600 text-blue-600 font-sm" >Online</span>
 
-            <span class="px-2 py-1.5 capitalize" ><%= post.prize_amount %> in prices</span>
-            <span class="px-2 py-1.5 capitalize" ><%= post.registrations_count %> Participants</span>
+            <span class="px-2 py-1.5 capitalize" >category :<%= post.category %></span>  <!-- concerts-->
+              <% if(post.entities[0]){ %>
+                <span class="px-2 py-1.5 capitalize" >location:  <%= post.entities[0].formatted_address %></span>  <!-- concerts--> 
+                <span class="px-2 py-1.5 capitalize" >Venue:  <%= post.entities[0].name %></span>
+                <span class="px-2 py-1.5 capitalize" >Audience:  <%= post.phq_attendance %></span>
+            <%  } %>
+            <span class="px-2 py-1.5 capitalize" ><%= post.phq_attendance %> Participants</span>   <!-- phq_attendance-->
             
           </div>
           
@@ -54,8 +82,9 @@
           <a class="edit" href="/edit/ post.id %>">Edit</a>
           <a class="delete" href="/api/posts/delete/post.id %>">Delete</a> -->
         </li>
-        <% }); %>
-       <% } %>
+      <% } %>
+       <%  }); %>
+     
       </ul>
     </div>
 

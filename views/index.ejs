@@ -12,7 +12,10 @@
       align-items: center;
     }
 
-    .card {
+    .card-1 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
       position: relative;
     width: 338px;
     height: 197px;
@@ -23,17 +26,117 @@
     padding: auto;
     background-color: transparent;
     color: white;
-   ;
-
-    
+    }
+    .card-2 {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+    .card-3 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+    .card-4 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
     }
 
-    .card:hover{
+    .card-5 {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    width: 338px;
+    height: 197px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 25px 25px;
+    padding: auto;
+    background-color: transparent;
+    color: white;
+    }
+
+    .card-1:hover{
+      background-image: url("/images/new4.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-1:hover .button {
+      opacity: 1;
+      transform: translatex(0);
+  
+    }
+    .card-4:hover{
+      background-image: url("/images/festival.avif");
+  background-position: center;
+  background-size: cover;
+
+    }
+    .card-4:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+    .card-2:hover{
+      background-image: url("/images/concerts.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-2:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+    .card-3:hover{
       background-image: url("/images/bg1.png");
   background-position: center;
   background-size: cover;
     }
-    .card:hover .button {
+    .card-3:hover .button {
+      opacity: 1;
+      transform: translateY(0);
+  
+    }
+
+    .card-5:hover{
+      background-image: url("/images/art.avif");
+  background-position: center;
+  background-size: cover;
+    }
+    .card-5:hover .button {
       opacity: 1;
       transform: translateY(0);
   
@@ -65,7 +168,7 @@
     width: 100vw;
     object-fit: cover;
     z-index: -2;
-    filter: brightness(0.7);
+    filter: brightness(0.5);
   }
   
 .dropbtn {
@@ -152,33 +255,48 @@ left:0px;
     </div>
     <div class="card-section">
       <div class="sec1">
-        <div class="card">
-          <h2>Sport-Events:</h2>
-          <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/sports" method="get">
+        <div class="card-1">
+          <h2>tecH-Events:</h2>
+          <p> clicl here to get the list of all Hackathon that is going on in your city</p>
+          <form action="/hackathon" method="get">
           <button class="button">Click me</button>
         </form>
         </div>
-        <div class="card">
-          <h2>Sport-Events:</h2>
-          <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/sports" method="get">
+        <div class="card-2">
+          <h2>Concerts:</h2>
+          <p> clicl here to get the list of all Concerts that is going on in your city</p>
+          <form action="/concerts" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
       </div>
       <div class="sec1">
-        <div class="card">
+        <div class="card-3">
           <h2>Sport-Events:</h2>
           <p> clicl here to get the list of all sports event that is going on in your city</p>
           <form action="/sports" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
-        <div class="card">
-          <h2>Sport-Events:</h2>
+        <div class="card-4">
+          <h2>festivals:</h2>
           <p> clicl here to get the list of all sports event that is going on in your city</p>
-          <form action="/sports" method="get">
+          <form action="/festivals" method="get">
+            <button class="button">Click me</button>
+          </form>
+        </div>
+        <div class="card-5">
+          <h2>Art Festivals :</h2>
+          <p> clicl here to get the list of all sports event that is going on in your city</p>
+          <form action="/performing-arts" method="get">
+            <button class="button">Click me</button>
+          </form>
+        </div>
+        <div class="card-4">
+          <h2>Conferences:</h2>
+          <p> clicl here to get the list of all art event that is going on in your city</p>
+          
+          <form action="/conferences" method="get">
             <button class="button">Click me</button>
           </form>
         </div>
