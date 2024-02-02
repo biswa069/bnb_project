@@ -89,9 +89,7 @@ app.get("/hackathon",(async (req,res)=>{
       console.log(error.message);
     }  
 }))
-app.listen(port,()=>{
-    console.log(`app is live at http://localhost${port}`);
-})
+
 let Image = "/images/bg1.png";
 app.get("/:category", async (req, res) => {
   const category = req.params.category;
@@ -131,7 +129,10 @@ try {
   res.status(500).send("An error occurred while searching for events.");
 }
 });
-app.listen(8000, () => {
-  console.log(`app is live at http://localhost${port}`);
-});
+// app.listen(port,"172.22.1.63", () => {
+//   console.log(`app is live at http://http://172.22.1.63:${port}`);
+// });
 
+app.listen(port, '172.22.1.63', () => {
+  console.log(`app is live at http://172.22.1.63:${port}`);
+});
